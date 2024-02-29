@@ -72,9 +72,6 @@ public class TestUtils {
         return requestSpecWithAuth;
     }
 
-    public static RequestSpecification getRequestSpecWithHeader() {
-        return requestSpecWithHeader;
-    }
 
     public static RequestSpecification getRequestSpecWithHeaderAuth(){
         return requestSpecWithHeaderAuth;
