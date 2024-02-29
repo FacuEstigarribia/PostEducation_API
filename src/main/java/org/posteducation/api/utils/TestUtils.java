@@ -21,7 +21,6 @@ public class TestUtils {
     public static Properties properties= new Properties();
     private static final RequestSpecification requestSpecWithAuth;
     private static final RequestSpecification requestSpecWithHeaderAuth;
-    private static final RequestSpecification requestSpecWithHeader;
     private static final ResponseSpecification responseSpec;
     private static final ResponseSpecification responseSpecCreate;
     private static final ResponseSpecification responseSpecDelete;
@@ -47,11 +46,6 @@ public class TestUtils {
                 setAuth(oAuth2Scheme).
                 build();
 
-        //Request specification with base Uri, header with Authorization and CLIENT_ID
-        requestSpecWithHeader = new RequestSpecBuilder().
-                addHeader("Authorization", "Client-ID " + properties.getProperty("CLIENT_ID")).
-                setBaseUri(properties.getProperty("ROOT_ENDPOINT")).
-                build();
 
         //Response specification with expected status code 200 and content type JSON
         responseSpec = new ResponseSpecBuilder().
