@@ -67,12 +67,9 @@ public class TestUtils {
     public static Properties getProperties() {
         return properties;
     }
-
     public static RequestSpecification getRequestSpecWithAuth() {
         return requestSpecWithAuth;
     }
-
-
     public static RequestSpecification getRequestSpecWithHeaderAuth(){
         return requestSpecWithHeaderAuth;
     }

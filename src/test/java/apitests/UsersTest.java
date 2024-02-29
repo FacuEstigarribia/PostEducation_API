@@ -54,11 +54,11 @@ public class UsersTest {
     @DataProvider(name = "testUserGet")
     public Object [][] dataForGetUser(){
         return new Object[][]{
-                {6732301}
+                {6750448}
         };
     }
     @Test(dataProvider = "testUserGet")
-    public void testGetUser(String userId){
+    public void testGetUser(Integer userId){
         InputStream getUserJsonSchema = getClass().getClassLoader()
                 .getResourceAsStream("getUserSchema.json");
 
@@ -181,7 +181,7 @@ public class UsersTest {
     @DataProvider(name = "testPostData")
     public Object[][] testPostUserData(){
         return new Object[][]{
-                {"Charles", "cwork@yahoo.com", "male", "active"}
+                {"phone", "pwork@yahoo.com", "male", "active"}
         };
     }
 
@@ -205,12 +205,12 @@ public class UsersTest {
     @DataProvider(name = "deleteUser")
     public Object[][] deleteUserData(){
         return new Object[][]{
-                {"6732319"}
+                {6750430}
         };
     }
 
     @Test(dataProvider = "deleteUser")
-    public void testDeleteUser(String id){
+    public void testDeleteUser(Integer id){
         given().
                 spec(requestSpecWithHeaderAuth).
 
