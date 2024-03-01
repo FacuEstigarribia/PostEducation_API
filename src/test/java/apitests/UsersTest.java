@@ -23,7 +23,6 @@ public class UsersTest {
 
     private static final Log LOGGER = LogFactory.getLog(UsersTest.class);
     static Properties properties= new Properties();
-    private static RequestSpecification requestSpecWithAuth;
 
     private static RequestSpecification requestSpecWithHeaderAuth;
 
@@ -37,7 +36,7 @@ public class UsersTest {
     public void beforeClassConfiguration(){
         properties = getProperties();
 
-        requestSpecWithAuth = getRequestSpecWithAuth();
+
 
         requestSpecWithHeaderAuth = getRequestSpecWithHeaderAuth();
 
